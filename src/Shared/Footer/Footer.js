@@ -1,10 +1,16 @@
 import React from 'react';
+import './Footer.css'
 
 const Footer = () => {
     return (
-        <div>
-            <h2>This is Footer page</h2>
-        </div>
+        <footer className='text-center text-lg-left'>
+            <div className='text-center p-3'>
+                &copy; Copyright:
+                <a className='text-dark' href='#'>
+                    Restaurant Guide
+                </a>
+            </div>
+        </footer>
     );
 };
 
