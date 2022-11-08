@@ -7,9 +7,9 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar expand="lg" className='bg-danger'>
             <Container>
-                <Navbar.Brand href="#">Restaurant Guide</Navbar.Brand>
+                <Navbar.Brand className='text-white' href="#">Restaurant Guide</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav

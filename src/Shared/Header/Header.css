@@ -1,7 +1,10 @@
 .navBar a{
     font-size: 20px;
-    color: crimson;
+    color: white;
     text-decoration: none;
     margin-right: 20px;
     font-weight: 600;
+}
+Navbar{
+    background-color: black;
 }
