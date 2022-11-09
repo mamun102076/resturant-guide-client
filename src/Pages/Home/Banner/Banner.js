@@ -6,7 +6,7 @@ import './Banner.css'
 
 const Banner = () => {
     return (
-        <Container fluid>
+        <Container fluid className='banner-top'>
             <Row>
                 <Col xs='auto'>
                     <card className='banner-item'>

@@ -1,7 +1,7 @@
-.container-fluid{
+.banner-top.container-fluid{
     position: relative;
 }
-.container-fluid::after{
+.banner-top.container-fluid::after{
     position: absolute;
     content: "";
     top: 0;
@@ -12,17 +12,17 @@
     opacity: 0.2;
     z-index: -1;
 }
-card img{
+.banner-top .card img{
     height: 400px;
 }
-.card-body{
+.banner-top .card-body{
     margin-top: 80px;
     margin-left: 30px;
     margin-bottom: 50px;
 }
-.card-title.h5{
+.banner-top .card-title.h5{
     font-size: 4.25rem;
 }
-.card-text{
+.banner-top .card-text{
     font-size: 20px;
 }

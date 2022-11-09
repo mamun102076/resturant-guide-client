@@ -3,6 +3,8 @@ import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
+import ServiceDetails from "../../Shared/Services/ServiceDetails/ServiceDetails";
+import Services from "../../Shared/Services/Services";
 
 export const router = createBrowserRouter([
     {
@@ -11,7 +13,8 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('http://localhost:5000/services')
             },
             {
                 path: '/blog',
@@ -20,7 +23,15 @@ export const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
-            }
+            },
+            {
+                path: '/services',
+                element: <Services></Services>
+            },
+            {
+                path: '/servicedetails/:id',
+                element: <ServiceDetails></ServiceDetails>
+            },
         ]
     }
 ])
