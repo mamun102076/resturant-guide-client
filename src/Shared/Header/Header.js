@@ -8,7 +8,10 @@ import './Header.css'
 import Button from 'react-bootstrap/Button';
 
 const Header = () => {
-    const { user } = useContext(AuthContext)
+    const { user,logOut } = useContext(AuthContext)
+    const handleLogOut = () =>{
+        logOut()
+    }
     console.log(user)
     return (
         <Navbar expand="lg" className='bg-danger'>
@@ -25,7 +28,7 @@ const Header = () => {
                                 user?.email ? 
                                 <>
                                     {user.email} 
-                                    <Button variant="light">logout</Button>
+                                    <Button onClick={handleLogOut} variant="light">logout</Button>
                                 </>
                                 :
                                 <>
