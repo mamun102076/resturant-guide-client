@@ -6,7 +6,6 @@ import Banner from './Banner/Banner';
 
 const Home = () => {
     const services = useLoaderData()
-    console.log(services)
     return (
         <div>
             <Banner></Banner>
@@ -15,7 +14,7 @@ const Home = () => {
                 <Container>
                     <Row>
                         {
-                            services.map(service => <Services key={service.service_id} service={service}></Services>)
+                            services.map(service => <Services key={service._id} service={service}></Services>)
                         }
                     </Row>
                 </Container>
