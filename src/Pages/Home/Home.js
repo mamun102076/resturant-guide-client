@@ -19,7 +19,7 @@ const Home = () => {
                     </Row>
                 </Container>
                 <div className='text-center text-success'>
-                    <Button variant="primary"><Link  className='text-light fs-4'>see all</Link></Button>
+                    <Button variant="primary"><Link to="/allservices"  className='text-light fs-4'>see all services</Link></Button>
                 </div>
             </div>
         </div>

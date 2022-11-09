@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
-const Services = ({service}) => {
-    var {_id,name,img,description,price,ratings} = service
+const ServiceCard = ({allservice}) => {
+    var {_id,name,img,description,price,ratings} = allservice
     return (
         <Col lg='4'>
             <Card className='mb-4'>
@@ -26,4 +26,4 @@ const Services = ({service}) => {
     );
 };
 
-export default Services;
+export default ServiceCard;
