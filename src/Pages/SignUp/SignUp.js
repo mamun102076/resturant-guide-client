@@ -1,3 +1,4 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -5,7 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const SignUp = () => {
-    const {createUser} = useContext(AuthContext)
+    const { createUser,handleGoogleSignIn } = useContext(AuthContext)
+    const googleProvider = new GoogleAuthProvider()
     const navigate = useNavigate()
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -14,13 +16,22 @@ const SignUp = () => {
         const photourl = form.photourl.value
         const email = form.email.value
         const password = form.password.value
-        console.log(fullname,photourl,email,password)
+        console.log(fullname, photourl, email, password)
 
-        createUser(email,password)
-        .then(result => {
+        createUser(email, password)
+            .then(result => {
+                const user = result.user
+                console.log(user)
+                form.reset()
+                navigate('/')
+            })
+            .catch(err => console.error(err))
+    }
+    const handleGoogle = () => {
+        handleGoogleSignIn(googleProvider)
+        .then(result =>{
             const user = result.user
             console.log(user)
-            form.reset()
             navigate('/')
         })
         .catch(err => console.error(err))
@@ -38,16 +49,20 @@ const SignUp = () => {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control name='email' type="email" placeholder="Enter email" required/>
+                    <Form.Control name='email' type="email" placeholder="Enter email" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control name='password' type="password" placeholder="Password" required/>
+                    <Form.Control name='password' type="password" placeholder="Password" required />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Sign Up
                 </Button>
             </Form>
+            <p className='text-center fs-4 text-muted'><small>--------------- or -----------------</small></p>
+            <div className='my-4'>
+                <Button onClick={handleGoogle} className='fw-semibold fs-5 w-100' variant="outline-danger">Sign Up With Google</Button>
+            </div>
         </div>
     );
 };
