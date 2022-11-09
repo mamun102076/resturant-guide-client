@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import './Header.css'
 import Button from 'react-bootstrap/Button';
+import { FaUser } from 'react-icons/fa';
 
 const Header = () => {
     const { user,logOut } = useContext(AuthContext)
@@ -16,7 +17,7 @@ const Header = () => {
     return (
         <Navbar expand="lg" className='bg-danger'>
             <Container>
-                <Navbar.Brand className='text-white' href="#">Restaurant Guide</Navbar.Brand>
+                <Link className='text-white fs-4 text-decoration-none' to="/">Restaurant Guide</Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -27,7 +28,7 @@ const Header = () => {
                             {
                                 user?.email ? 
                                 <>
-                                    {user.email} 
+                                    <Link><FaUser></FaUser></Link>
                                     <Button onClick={handleLogOut} variant="light">logout</Button>
                                 </>
                                 :
@@ -37,7 +38,6 @@ const Header = () => {
                                 </>
                             }
                         </>
-
                     </Nav>
                 </Navbar.Collapse>
             </Container>

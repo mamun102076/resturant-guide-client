@@ -38,6 +38,7 @@ const SignUp = () => {
     }
     return (
         <div className='my-5 w-50 mx-auto'>
+            <h2 className='text-center'>Register</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Full Name:</Form.Label>
