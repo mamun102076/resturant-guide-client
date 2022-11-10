@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Container, Row } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import Services from '../../Shared/Services/Services';
+import About from './About/About';
 import Banner from './Banner/Banner';
 
 const Home = () => {
@@ -19,9 +20,10 @@ const Home = () => {
                     </Row>
                 </Container>
                 <div className='text-center text-success'>
-                    <Button variant="primary"><Link to="/allservices"  className='text-light fs-4'>see all services</Link></Button>
+                    <Button variant="primary"><Link to="/allservices"  className='text-light fs-4'>see all resturants</Link></Button>
                 </div>
             </div>
+            <About></About>
         </div>
     );
 };

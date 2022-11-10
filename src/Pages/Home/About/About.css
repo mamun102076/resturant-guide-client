@@ -1,0 +1,13 @@
+.about-page{
+    margin-bottom: 30px;
+    background-color: blueviolet;
+    padding: 40px;
+    color: white;
+}
+.about-left{
+    font-size: 40px;
+    margin-top: 55px;
+}
+.about-right{
+    font-size: 20px;
+}
