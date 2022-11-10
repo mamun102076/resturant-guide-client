@@ -17,7 +17,7 @@ const Banner = () => {
                     <Card.Body>
                         <Card.Title>Hello,</Card.Title>
                         <Card.Text>
-                            I am maria.I am a professional guide for finding the best restaurant around the area.
+                            I am maria.I am a professional guide for helping you to find the best restaurant around the world.
                         </Card.Text>
                     </Card.Body>
                 </Col>

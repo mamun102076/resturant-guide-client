@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAAJxQbvp7gtjVTd_GAIrmnZA1BXsyUg_4",
-  authDomain: "restaurant-guide-8787d.firebaseapp.com",
-  projectId: "restaurant-guide-8787d",
-  storageBucket: "restaurant-guide-8787d.appspot.com",
-  messagingSenderId: "503842284222",
-  appId: "1:503842284222:web:3ebb023fb569c363c5f4ef"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase
