@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 import img from '../../../assests/brands/img2.png'
 import './Banner.css'
 
@@ -10,7 +12,11 @@ const Banner = () => {
             <Row>
                 <Col xs='auto'>
                     <card className='banner-item'>
-                        <Card.Img src={img} className='img=fluid' />
+                        <PhotoProvider>
+                            <PhotoView src={img}>
+                                <Card.Img src={img} className='img=fluid' />
+                            </PhotoView>
+                        </PhotoProvider>
                     </card>
                 </Col>
                 <Col>

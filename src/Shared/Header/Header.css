@@ -5,6 +5,9 @@
     margin-right: 20px;
     font-weight: 600;
 }
-Navbar{
-    background-color: black;
+.navbar img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
 }

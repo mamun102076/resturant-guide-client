@@ -12,7 +12,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div className='home-services my-5'>
-                <h2 className='text-center mb-5 text-secondary'>My recommended restaurants</h2>
+                <h2 className='text-center mb-5'>My recommended restaurants</h2>
                 <Container>
                     <Row>
                         {

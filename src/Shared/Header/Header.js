@@ -7,6 +7,7 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import './Header.css'
 import Button from 'react-bootstrap/Button';
 import { FaUser } from 'react-icons/fa';
+import img from '../../assests/brands/img2.jpg'
 
 const Header = () => {
     const { user,logOut } = useContext(AuthContext)
@@ -17,6 +18,7 @@ const Header = () => {
     return (
         <Navbar expand="lg" className='bg-danger'>
             <Container>
+                <img src={img} alt="" />
                 <Link className='text-white fs-4 text-decoration-none' to="/">Restaurant Guide</Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
