@@ -4,11 +4,13 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const SignUp = () => {
     const { createUser,handleGoogleSignIn } = useContext(AuthContext)
     const googleProvider = new GoogleAuthProvider()
     const navigate = useNavigate()
+    useTitle('Register')
     const handleSubmit = (event) => {
         event.preventDefault()
         const form = event.target

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Container, Row } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 import Services from '../../Shared/Services/Services';
 import About from './About/About';
 import Banner from './Banner/Banner';
@@ -8,6 +9,7 @@ import FAQ from './FAQ/FAQ';
 
 const Home = () => {
     const services = useLoaderData()
+    useTitle('Home')
     return (
         <div>
             <Banner></Banner>
