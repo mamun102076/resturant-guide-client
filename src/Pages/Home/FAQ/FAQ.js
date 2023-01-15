@@ -11,7 +11,7 @@ const FAQ = () => {
                     <Accordion.Item eventKey="0">
                         <Accordion.Header><h4>How to find me ?</h4></Accordion.Header>
                         <Accordion.Body>
-                            My address is 225 dhaka.
+                            My address is 225/k Jatrabari dhaka.
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
