@@ -4,7 +4,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <footer className='text-center text-lg-left'>
+        <footer className='text-center text-lg-left p-4'>
             <div className='text-center p-3'>
                 &copy; Copyright:
                 <Link className='text-dark'>Restaurant Guide</Link>

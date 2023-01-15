@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
@@ -8,6 +9,7 @@ import useTitle from '../../hooks/useTitle';
 const Login = () => {
     const {handleSignIn} = useContext(AuthContext)
     const navigate = useNavigate() 
+    const [loginError,setLoginError] = useState('')
     useTitle('Login')
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -23,7 +25,10 @@ const Login = () => {
             form.reset()
             navigate('/')
         })
-        .catch(err => console.error(err))
+        .catch(error => {
+            console.error(error)
+            setLoginError(error.message)
+        })
     }
     return (
         <div className='my-5 w-50 mx-auto'>
@@ -37,6 +42,7 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control name='password' type="password" placeholder="Password" />
                 </Form.Group>
+                <p>{loginError}</p>
                 <Button variant="primary" type="submit">
                     Login
                 </Button>

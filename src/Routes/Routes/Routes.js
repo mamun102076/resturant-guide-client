@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
+import AddService from "../../Pages/AddService/AddService";
 import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
                 element: <AllServices></AllServices>,
                 loader: () => fetch('https://resturant-guide-server.vercel.app/allservices')
             },
+            {
+                path: '/addservice',
+                element: <AddService></AddService>
+            }
         ]
     }
 ])

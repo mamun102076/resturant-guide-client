@@ -4,7 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 
 const FAQ = () => {
     return (
-        <div className='my-5 p-5' style={{backgroundColor: 'powderblue'}}>
+        <div className='p-5' style={{backgroundColor: 'powderblue'}}>
             <Container>
                 <h2 className='text-center mb-4'>More about me</h2>
                 <Accordion defaultActiveKey="0">

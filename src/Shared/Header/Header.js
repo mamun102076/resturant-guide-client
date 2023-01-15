@@ -30,6 +30,7 @@ const Header = () => {
                             {
                                 user?.email ? 
                                 <>
+                                    <Link to='/addservice'>Add A Service</Link>
                                     <Link><FaUser></FaUser></Link>
                                     <Button onClick={handleLogOut} variant="light">logout</Button>
                                 </>
