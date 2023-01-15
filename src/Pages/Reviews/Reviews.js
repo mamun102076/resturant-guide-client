@@ -19,7 +19,7 @@ const Reviews = () => {
 
     const [reviewData, setReviewData] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/review/${data?._id}`)
+        fetch(`https://resturant-guide-server.vercel.app/review/${data?._id}`)
             .then(res => res.json())
             .then(result => {
                 setReviewData(result)
@@ -44,7 +44,7 @@ const Reviews = () => {
             userComment: comment,
             serviceId: data._id
         }
-        fetch('http://localhost:5000/review', {
+        fetch('https://resturant-guide-server.vercel.app/review', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

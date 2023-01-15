@@ -12,7 +12,7 @@ const AdvertiseService = () => {
     const { loading } = useContext(AuthContext)
     const [advertises, setAdvertises] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/addservice')
+        fetch('https://resturant-guide-server.vercel.app/addservice')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
