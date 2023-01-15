@@ -7,7 +7,7 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 
 const SignUp = () => {
-    const { createUser,handleGoogleSignIn } = useContext(AuthContext)
+    const { createUser,handleGoogleSignIn,updateUser } = useContext(AuthContext)
     const googleProvider = new GoogleAuthProvider()
     const navigate = useNavigate()
     useTitle('Register')
@@ -24,8 +24,16 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user
                 console.log(user)
-                form.reset()
-                navigate('/')
+                const userInfo = {
+                    displayName: fullname,
+                    photoURL: photourl
+                }
+                updateUser(userInfo)
+                .then(() => {
+                    form.reset()
+                    navigate('/')
+                })
+                .catch(error => console.log(error))
             })
             .catch(err => console.error(err))
     }

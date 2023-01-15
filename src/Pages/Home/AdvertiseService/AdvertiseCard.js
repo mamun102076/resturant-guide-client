@@ -1,6 +1,5 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 
@@ -20,10 +19,9 @@ const AdvertiseCard = ({ advertise }) => {
                         {description}
                     </Card.Text>
                     <div className='d-flex justify-content-between'>
-                        <p><span className='fw-bold'>Price:</span> {price}</p>
+                        <p><span className='fw-bold'>Price:</span> {price}$</p>
                         <p><span className='fw-bold'>Rating:</span> {rating}</p>
                     </div>
-                    <Button variant="primary">See Details</Button>
                 </Card.Body>
             </Card>
         </Col>

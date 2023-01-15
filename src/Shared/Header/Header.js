@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import './Header.css'
 import Button from 'react-bootstrap/Button';
-import { FaUser } from 'react-icons/fa';
 import img from '../../assests/brands/img2.jpg'
 
 const Header = () => {
@@ -31,7 +30,6 @@ const Header = () => {
                                 user?.email ? 
                                 <>
                                     <Link to='/addservice'>Add A Service</Link>
-                                    <Link><FaUser></FaUser></Link>
                                     <Button onClick={handleLogOut} variant="light">logout</Button>
                                 </>
                                 :
