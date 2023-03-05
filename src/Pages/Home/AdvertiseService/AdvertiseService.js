@@ -15,7 +15,6 @@ const AdvertiseService = () => {
         fetch('https://resturant-guide-server.vercel.app/addservice')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setAdvertises(data)
             })
     }, [])

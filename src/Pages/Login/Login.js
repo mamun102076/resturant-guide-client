@@ -18,7 +18,6 @@ const Login = () => {
         const form = event.target
         const email = form.email.value
         const password = form.password.value
-        console.log(email,password)
 
         handleSignIn(email, password)
         .then(result => {
@@ -33,8 +32,8 @@ const Login = () => {
         })
     }
     return (
-        <div className='my-5 w-50 mx-auto'>
-            <h2 className='text-center'>Login</h2>
+        <div className='my-5 w-75 mx-auto'>
+            <h2 className='text-center mb-4'>Login</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>

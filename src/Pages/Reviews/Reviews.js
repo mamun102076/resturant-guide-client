@@ -59,8 +59,6 @@ const Reviews = () => {
             })
     }
 
-    console.log(reviewData)
-
     if (loading) {
         return <Loading></Loading>
     }

@@ -20,7 +20,7 @@ const Banner = () => {
                     </card>
                 </Col>
                 <Col>
-                    <Card.Body>
+                    <Card.Body className='text-black'>
                         <Card.Title>Hello,</Card.Title>
                         <Card.Text>
                             I am maria.I am a professional guide for helping you to find the best restaurant around the world.

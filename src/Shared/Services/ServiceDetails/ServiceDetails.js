@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 
 const ServiceDetails = () => {
     const serviceDetail = useLoaderData()
-    console.log(serviceDetail)
     return (
         <div className='mb-5'>
             <Container>

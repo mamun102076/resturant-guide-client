@@ -12,7 +12,6 @@ const AddService = () => {
         const price = form.price.value
         const rating = form.rating.value
         const description = form.description.value
-        console.log(name, image, price, rating, description)
 
         const service = {
             name,
@@ -32,7 +31,6 @@ const AddService = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    console.log(data)
                     toast.success('service addes successfully')
                 }
             })

@@ -8,8 +8,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
-    opacity: 0.2;
+    background-color: rgb(235, 213, 16);
+    opacity: 0.8;
     z-index: -1;
 }
 .banner-top .card img{

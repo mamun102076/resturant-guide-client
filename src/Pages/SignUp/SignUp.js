@@ -18,7 +18,6 @@ const SignUp = () => {
         const photourl = form.photourl.value
         const email = form.email.value
         const password = form.password.value
-        console.log(fullname, photourl, email, password)
 
         createUser(email, password)
             .then(result => {
@@ -47,8 +46,8 @@ const SignUp = () => {
         .catch(err => console.error(err))
     }
     return (
-        <div className='my-5 w-50 mx-auto'>
-            <h2 className='text-center'>Register</h2>
+        <div className='my-5 w-75 mx-auto'>
+            <h2 className='text-center mb-4'>Register</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Full Name:</Form.Label>

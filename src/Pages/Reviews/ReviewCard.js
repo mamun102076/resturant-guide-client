@@ -8,7 +8,7 @@ const ReviewCard = ({ review }) => {
 
     return (
         <Col lg="4">
-            <Card style={{ width: '18rem' }}>
+            <Card className='my-3'>  
                 <Card.Img variant="top" src={image} />
                 <Card.Body>
                     <Card.Title>{userName}</Card.Title>

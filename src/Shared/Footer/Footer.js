@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className='text-center text-lg-left p-4'>
             <div className='text-center p-3'>
                 &copy; Copyright:
-                <Link className='text-dark'>Restaurant Guide</Link>
+                <Link className='text-dark'> Restaurant Guide</Link>
             </div>
         </footer>
     );

@@ -4,10 +4,10 @@ import Accordion from 'react-bootstrap/Accordion';
 
 const FAQ = () => {
     return (
-        <div className='p-5' style={{backgroundColor: 'powderblue'}}>
+        <div style={{backgroundColor: 'powderblue'}}>
             <Container>
-                <h2 className='text-center mb-4'>More about me</h2>
-                <Accordion defaultActiveKey="0">
+                <h2 className='text-center py-4'>More about me</h2>
+                <Accordion className='pb-5' defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header><h4>How to find me ?</h4></Accordion.Header>
                         <Accordion.Body>
