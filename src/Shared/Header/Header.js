@@ -13,9 +13,9 @@ const Header = () => {
         logOut()
     }
     return (
-        <Navbar expand="lg" className='bg-danger p-3'>
+        <Navbar expand="lg" className='nav-start p-3'>
             <Container>
-                <Link className='text-white fs-4 text-decoration-none' to="/">Restaurant Guide</Link>
+                <Link className='text-white fs-4 text-decoration-none fw-bolder' to="/">Restaurant Guide</Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav

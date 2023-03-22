@@ -1,5 +1,21 @@
 footer{
-    background-color: rgb(46, 194, 194);
-    color: white;
-    font-size: 25px;
+    background: linear-gradient(180deg, rgb(4, 70, 90), rgba(1, 76, 105, 0.822));
+    color: #e8f80b;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+footer ul{
+    list-style: none;
+}
+footer ul li{
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+footer a{
+    color: #e8f80b;
+    text-decoration: none;
+}
+footer a:hover{
+    color: rgb(0, 255, 42);
 }

@@ -1,0 +1,15 @@
+.home-services button.service-btn{
+    background: linear-gradient(180deg, rgb(19, 155, 103), rgb(38, 184, 116));
+    border: none;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 7px 30px;
+    box-shadow: 0 0px 20px 5px rgb(65, 225, 126);
+}
+.home-services a{
+    text-decoration: none;
+}
+.home-services h2{
+    color: rgb(49, 163, 106);
+    font-weight: 700;
+}

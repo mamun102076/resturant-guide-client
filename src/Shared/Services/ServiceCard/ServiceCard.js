@@ -10,7 +10,7 @@ const ServiceCard = ({ allservice }) => {
     var { _id, name, img, description, price, ratings } = allservice
     return (
         <Col lg='4'>
-            <Card className='mb-4'>
+            <Card className=''>
                 <PhotoProvider>
                     <PhotoView src={img}>
                         <Card.Img variant="top" src={img} />

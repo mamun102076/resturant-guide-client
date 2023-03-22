@@ -5,12 +5,13 @@ import Card from 'react-bootstrap/Card';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { Link } from 'react-router-dom';
+import './Services.css'
 
 const Services = ({ service }) => {
     var { _id, name, img, description, price, ratings } = service
     return (
         <Col lg='4'>
-            <Card className='mb-4'>
+            <Card className='service-item mb-4'>
                 <PhotoProvider>
                     <PhotoView src={img}>
                         <Card.Img variant="top" src={img} />
@@ -25,7 +26,7 @@ const Services = ({ service }) => {
                         <p>Price: {price}</p>
                         <p>Rating: {ratings}</p>
                     </div>
-                    <Button variant="primary"><Link to={`/servicedetails/${_id}`} className='text-light'>See details</Link></Button>
+                    <Button className='service-button'><Link to={`/servicedetails/${_id}`} className='text-light'>See details</Link></Button>
                 </Card.Body>
             </Card>
         </Col>

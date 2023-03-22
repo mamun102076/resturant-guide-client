@@ -7,6 +7,7 @@ import About from './About/About';
 import AdvertiseService from './AdvertiseService/AdvertiseService';
 import Banner from './Banner/Banner';
 import FAQ from './FAQ/FAQ';
+import './Home.css'
 
 const Home = () => {
     const services = useLoaderData()
@@ -15,7 +16,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div className='home-services my-5'>
-                <h2 className='text-center mb-5'>My recommended restaurants</h2>
+                <h2 className='text-center my-4'><i>My recommended restaurants</i></h2>
                 <Container>
                     <Row>
                         {
@@ -23,8 +24,8 @@ const Home = () => {
                         }
                     </Row>
                 </Container>
-                <div className='text-center text-success'>
-                    <Button variant="primary"><Link to="/allservices"  className='text-light fs-4'>see all resturants</Link></Button>
+                <div className='text-center text-success mt-4'>
+                    <Button className='service-btn' variant="primary"><Link to="/allservices"  className='text-light fs-4'>See all resturants</Link></Button>
                 </div>
             </div>
             <AdvertiseService></AdvertiseService>

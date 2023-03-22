@@ -20,10 +20,11 @@ const Banner = () => {
                     </card>
                 </Col>
                 <Col>
-                    <Card.Body className='text-black'>
-                        <Card.Title>Hello,</Card.Title>
+                    <Card.Body className='text-white'>
                         <Card.Text>
-                            I am maria.I am a professional guide for helping you to find the best restaurant around the world.
+                            <p className='triangle-down'>Hello,There</p>
+                            <h1>I'm Maria</h1>
+                            <p className='summery'>I am a professional guide for helping you to find the best restaurant around the world.</p>
                         </Card.Text>
                     </Card.Body>
                 </Col>

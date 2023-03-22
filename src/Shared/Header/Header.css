@@ -1,9 +1,15 @@
+.nav-start{
+    background: linear-gradient(to right, #12c09a 0%, rgb(7, 136, 241) 50% ,#073496 100%);
+}
 .navBar a{
     font-size: 20px;
     color: white;
     text-decoration: none;
     margin-right: 20px;
     font-weight: 600;
+}
+.navBar a:hover{
+    color: rgb(77, 228, 255);
 }
 .navbar img{
     height: 60px;
